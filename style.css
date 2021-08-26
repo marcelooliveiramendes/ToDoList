@@ -7,3 +7,52 @@
     list-style: none;
     text-decoration: none;
 }
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(95, 139, 235);
+}
+
+.container{
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 25px;
+}   
+
+.container header{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container .inputField{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input{
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.inputField button{
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #8E49F8;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 5px;
+}
