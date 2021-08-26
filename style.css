@@ -60,5 +60,15 @@ body{
 }
 
 .todoList{
-    
+
+}
+
+.todoList li{
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+}
+.todoList li span{
+    position: absolute;
+    right: 0px;
 }
