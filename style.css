@@ -67,8 +67,25 @@ body{
     height: 45px;
     line-height: 45px;
     position: relative;
+    background: #f2f2f2;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
 }
 .todoList li span{
     position: absolute;
     right: 0px;
+    color: #fff;
+    background: #f13030;
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.container .footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
 }
