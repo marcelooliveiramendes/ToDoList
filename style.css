@@ -43,6 +43,7 @@ body{
     font-size: 17px;
     border-radius: 3px;
     padding-left: 15px;
+    outline: none;
 }
 
 .inputField button{
@@ -54,5 +55,6 @@ body{
     color: #fff;
     font-size: 22px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 3px;
+    margin-left: 5px;
 }
