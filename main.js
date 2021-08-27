@@ -9,8 +9,10 @@ inputBox.onkeyup = () => {
     } else {
         addBtn.classList.remove("active");
     }
-
 }
+
+showTasks();
+
 
 addBtn.onclick = () => {
     let userData = inputBox.value;
@@ -25,6 +27,8 @@ addBtn.onclick = () => {
     showTasks();
 }
 
+
+// funcao que adiciona a lista de tarefas dentro da ul
 function showTasks(){
     let getLocalStorage = localStorage.getItem('New Todo');
     if(getLocalStorage == null){ //se localStorage for nulo
@@ -34,8 +38,19 @@ function showTasks(){
     }
     let newLiTag = '';
     listArr.forEach((element, index) => {
-        newLiTag += `<li> ${element} <span><i class="fas fa-trash"></i></span></li>`;
+        newLiTag += `<li> ${element} <span onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
     });
     todoList.innerHTML = newLiTag; // add nova li
+    inputBox.value = ""; // apos add uma tarefa, limpa a textbox
 }
 
+
+//funcao de apagar a tarefa
+function deleteTask(index){
+    let getLocalStorage = localStorage.getItem('New Todo');
+    listArr = JSON.parse(getLocalStorage);
+    listArr.splice(index, 1); // deleta a tarefa em particular pelo index
+    // depois de remover, atualiza a lista e o localStorage
+    localStorage.setItem("New Todo", JSON.stringify(listArr));
+    showTasks();
+}
