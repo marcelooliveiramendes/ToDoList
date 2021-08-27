@@ -57,3 +57,12 @@ function deleteTask(index){
     localStorage.setItem("New Todo", JSON.stringify(listArr));
     showTasks();
 }
+
+
+//funcao apagar tudo
+deleteAllBtn.onclick = () => {
+    listArr = []; // limpa a array
+    // depois de remover tudo, atualiza a lista e o localStorage
+    localStorage.setItem("New Todo", JSON.stringify(listArr));
+    showTasks();
+}
