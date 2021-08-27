@@ -1,5 +1,6 @@
 const inputBox = document.querySelector('.inputField input');
 const addBtn = document.querySelector('.inputField button');
+const deleteAllBtn = document.querySelector('.footer button');
 const todoList = document.querySelector('.todoList');
 
 inputBox.onkeyup = () => {
@@ -36,6 +37,8 @@ function showTasks(){
     } else {
         listArr = JSON.parse(getLocalStorage); // transformando json string em js object
     }
+    const pedingNumb = document.querySelector('.pendingNumb');
+    pedingNumb.textContent = listArr.length;
     let newLiTag = '';
     listArr.forEach((element, index) => {
         newLiTag += `<li> ${element} <span onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
