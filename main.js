@@ -10,3 +10,15 @@ inputBox.onkeyup = () => {
     }
 
 }
+
+addBtn.onclick = () => {
+    let userData = inputBox.value;
+    let getLocalStorage = localStorage.getItem('New Todo');
+    if(getLocalStorage == null){ //se localStorage for nulo
+        listArr = []; // criar um array vazio
+    } else {
+        listArr = JSON.parse(getLocalStorage); // transformando json string em js object
+    }
+    listArr.push(userData) // adicionando user data
+    localStorage.setItem("New Todo", JSON.stringify(listArr)); // transformando js object em json string
+}
