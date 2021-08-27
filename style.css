@@ -65,10 +65,13 @@ body{
     pointer-events: auto;
 }
 
-
 .container .todoList{
     max-height: 250px;
     overflow-y: auto;
+}
+
+.todoList::-webkit-scrollbar-track{
+    background-color: red;
 }
 
 .todoList li{
