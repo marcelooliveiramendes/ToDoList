@@ -1,5 +1,6 @@
 const inputBox = document.querySelector('.inputField input');
 const addBtn = document.querySelector('.inputField button');
+const todoList = document.querySelector('.todoList');
 
 inputBox.onkeyup = () => {
     let userData = inputBox.value;
@@ -21,4 +22,17 @@ addBtn.onclick = () => {
     }
     listArr.push(userData) // adicionando user data
     localStorage.setItem("New Todo", JSON.stringify(listArr)); // transformando js object em json string
+}
+
+function showTasks(){
+    let getLocalStorage = localStorage.getItem('New Todo');
+    if(getLocalStorage == null){ //se localStorage for nulo
+        listArr = []; // criar um array vazio
+    } else {
+        listArr = JSON.parse(getLocalStorage); // transformando json string em js object
+    }
+    let newLiTag = "";
+    listArr.forEach(element, index => {
+        newLiTag = `<li>${element}<span><i class="fas fa-trash"></i></span></li>`
+    });
 }
