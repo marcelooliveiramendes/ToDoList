@@ -22,6 +22,7 @@ addBtn.onclick = () => {
     }
     listArr.push(userData) // adicionando user data
     localStorage.setItem("New Todo", JSON.stringify(listArr)); // transformando js object em json string
+    showTasks();
 }
 
 function showTasks(){
@@ -31,8 +32,10 @@ function showTasks(){
     } else {
         listArr = JSON.parse(getLocalStorage); // transformando json string em js object
     }
-    let newLiTag = "";
-    listArr.forEach(element, index => {
-        newLiTag = `<li>${element}<span><i class="fas fa-trash"></i></span></li>`
+    let newLiTag = '';
+    listArr.forEach((element, index) => {
+        newLiTag += `<li> ${element} <span><i class="fas fa-trash"></i></span></li>`;
     });
+    todoList.innerHTML = newLiTag; // add nova li
 }
+
