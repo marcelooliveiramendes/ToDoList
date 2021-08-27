@@ -60,6 +60,11 @@ body{
     opacity: 0.6;
     pointer-events: none;
 }
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 
 .container .todoList{
     max-height: 250px;
