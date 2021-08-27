@@ -26,6 +26,7 @@ addBtn.onclick = () => {
     listArr.push(userData) // adicionando user data
     localStorage.setItem("New Todo", JSON.stringify(listArr)); // transformando js object em json string
     showTasks();
+    addBtn.classList.remove("active"); //desativa o botao de add
 }
 
 
@@ -39,6 +40,13 @@ function showTasks(){
     }
     const pedingNumb = document.querySelector('.pendingNumb');
     pedingNumb.textContent = listArr.length;
+
+    if(listArr.length > 0){
+        deleteAllBtn.classList.add('active');
+    } else {
+        deleteAllBtn.classList.remove('active');
+    }
+
     let newLiTag = '';
     listArr.forEach((element, index) => {
         newLiTag += `<li> ${element} <span onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
