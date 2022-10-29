@@ -7,25 +7,26 @@
     list-style: none;
     text-decoration: none;
 }
-
-body{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(95, 139, 235);
-    overflow: hidden;
-}
+    
 
 .container{
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    max-width: 400px;
     width: 100%;
+    
+    background-color: rgb(95, 139, 235);
+}  
+
+.content{
+    max-width: 500px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     padding: 25px;
-}   
+}
+
 
 .container header{
     font-size: 30px;
@@ -130,6 +131,7 @@ body{
     padding: 6px 10px;
     opacity: 0.6;
     pointer-events: none;
+    margin-left: 5px;
 }
 .footer button.active{
     opacity: 1;
