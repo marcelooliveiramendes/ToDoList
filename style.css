@@ -12,10 +12,14 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: rgb(95, 139, 235);
+    overflow: hidden;
 }
 
 .container{
-    margin: 120px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     max-width: 400px;
     width: 100%;
     background-color: rgb(255, 255, 255);
